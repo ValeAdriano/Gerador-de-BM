@@ -75,5 +75,5 @@ with sync_playwright() as p:
 
 ---
 
-Feito com ❤️ por [Seu Nome]. Contribuições são bem-vindas! 🚀
+Feito com ❤️ por Adriano Vale. Contribuições são bem-vindas! 🚀
 
