@@ -1,10 +1,11 @@
-# 🚀 Automacao com Playwright e AdsPower
+# 🚀 Automação de Criação de BMs no Facebook com Playwright e AdsPower
 
-Este projeto permite a automação de navegadores gerenciados pelo **AdsPower**, utilizando **Playwright** para interagir com páginas da web de forma eficiente e menos detectável.
+Este projeto tem como objetivo a criação automatizada de **Business Managers (BMs)** no Facebook utilizando **Playwright** e **AdsPower**. A automação permite a geração e configuração de contas de forma eficiente e menos detectável.
 
 ## 🎯 Funcionalidades
+✅ Criar **Business Managers (BMs)** automaticamente no Facebook.  
 ✅ Conectar o Playwright a perfis do AdsPower via **API** ou **CDP** (Chromium DevTools Protocol).  
-✅ Automação de tarefas como login, preenchimento de formulários e scraping.  
+✅ Automação de tarefas como login, preenchimento de formulários e configurações de BM.  
 ✅ Suporte a proxies configurados no AdsPower.  
 ✅ Execução headless ou em modo visível para debugging.  
 
@@ -41,8 +42,8 @@ if data["code"] == 0:
     with sync_playwright() as p:
         browser = p.chromium.connect_over_cdp(ws_endpoint)
         page = browser.new_page()
-        page.goto("https://www.exemplo.com")
-        print(page.title())
+        page.goto("https://business.facebook.com")
+        print("BM criado com sucesso!")
         browser.close()
 else:
     print("Erro ao iniciar o perfil:", data)
@@ -57,8 +58,8 @@ ws_endpoint = "ws://127.0.0.1:9222/devtools/browser/abcdef123456"  # Pegue essa 
 with sync_playwright() as p:
     browser = p.chromium.connect_over_cdp(ws_endpoint)
     page = browser.new_page()
-    page.goto("https://www.exemplo.com")
-    print(page.title())
+    page.goto("https://business.facebook.com")
+    print("BM criado com sucesso!")
     browser.close()
 ```
 
@@ -68,8 +69,8 @@ with sync_playwright() as p:
 - Para evitar bloqueios, utilize **delays aleatórios** entre as ações e tente simular o comportamento humano.
 
 ## 📌 Próximos Passos
-🔹 Adicionar suporte para múltiplos perfis simultâneos.  
-🔹 Melhorar o tratamento de erros e logging.  
+🔹 Melhorar a automação para configurar automaticamente permissões do BM.  
+🔹 Implementar suporte para múltiplas contas simultâneas.  
 🔹 Criar um painel para gerenciar automações.  
 
 ---
